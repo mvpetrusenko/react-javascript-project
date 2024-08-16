@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper to contain the entire content */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Main content should take all available space */
+main {
+    flex: 1;
+} 
+ 
+
+h4 {
+    text-align: center; 
+    margin: 70px 70px 10px 70px; 
+    
+} 
+
+
+.aboutContent { 
+    flex: 0 0 30%;
+    padding: 5px; 
+    margin-left: 30px; 
+    text-align: left;
+
+} 
+
+.newsLetter {
+    flex: 1; /* Takes the remaining space */
+    padding: 20px; 
+    margin: 60px 10px 10px 10px; 
+    background-color: antiquewhite;
+}
+
+/* Fieldset styles */
+fieldset {
+    background-color: lightskyblue;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 45%;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: content-box;
+}
+
+
+input[type="subscribe"] {
+    width: 15%;
+    margin-top: 10px;
+    float: right;
+}
+
+div.output {
+    width: 75%;
+    height: 2px;
+    padding: 10px 30px 50px 50px;
+    margin: 15px 5px;
+    background-color: azure;
+}

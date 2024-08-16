@@ -1,0 +1,60 @@
+.tariffContainer {
+    display: flexbox; /* Enable flexbox */
+    justify-content: space-between; /* Space out the blocks */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */ 
+    gap: 20px; /* Space between blocks */ 
+
+
+  }
+
+  .card { 
+    flex: 1 1 30%; /* Flex-grow and flex-shrink with a base width of 30% */
+    padding: 8px;
+    border-radius: 8px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stack content vertically within block */
+    justify-content: space-between; /* Distribute space evenly within block */
+  
+  } 
+
+  /* Style the list */
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  } 
+
+  .price .tariffName {
+    background-color: #3a0ecb;
+    color: white;
+    font-size: 25px;
+  } 
+
+
+  .price li {
+    border-bottom: 2px solid #0a0761;
+    padding: 20px;
+    text-align: center; 
+  }
+  
+
+  .price .tariffPrice {
+    background-color: #8965ff;
+    font-size: 20px;
+  } 
+
+
+  .registerButton {
+    background-color: #0da898;
+    border: 1px solid #0a0761;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+  }

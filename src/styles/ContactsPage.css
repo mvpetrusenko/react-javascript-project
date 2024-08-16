@@ -1,0 +1,122 @@
+/* General styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Wrapper to contain the entire content */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Main content should take all available space */
+main {
+    flex: 1;
+} 
+
+/* Navigation and article container */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Article styles */
+article {
+    flex: 1; /* Takes the remaining space */
+    padding: 20px;
+    background-color: #f1f1f1;
+}
+
+/* Fieldset styles */
+fieldset {
+    background-color: lightskyblue;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 45%;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: content-box;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+}
+
+input[type="submit"] {
+    width: 15%;
+    margin-top: 10px;
+    float: right;
+}
+
+div.output {
+    width: 75%;
+    height: 2px;
+    padding: 10px 30px 50px 50px;
+    margin: 15px 5px;
+    background-color: azure;
+}
+
+
+div.contactsInfo { 
+    flex: 0 0 40%;
+    padding: 20px; 
+    margin-left: 30px;
+} 
+
+div.contactsFormSection {
+    flex: 1; /* Takes the remaining space */
+    padding: 20px;
+    background-color: #f1f1f1;
+} 
+
+div.contactsForm {
+    background-color: lightskyblue;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 5px 5px 5px 5px;
+    width: 80%;
+} 
+
+.validateFormError {
+    font-size: 14px; 
+    color: red; 
+    font-weight: bold;
+} 
+
+
+.fa-icon {
+    margin-right: 10px; /* Space between icon and text */
+    display: inline-block; /* Ensure the icon is inline with the text */  
+    color: rgb(14, 55, 151);
+  } 
+
+
+p {
+    margin-bottom: 10px; 
+
+} 
+
+
+

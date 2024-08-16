@@ -1,0 +1,12 @@
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4f75dc; 
+    margin-top: auto; /* Pushes the footer to the bottom */ 
+
+} 
+
+.copyrights {
+    text-align: center; 
+    margin-left: 173px;
+}

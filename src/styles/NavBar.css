@@ -1,0 +1,71 @@
+/* src/components/NavBar.css */
+.navbar { 
+    /* flex: 0 0 15%; /* 15% width for the nav */
+     padding: 20px;
+     background-color: #1d529d; 
+     /*width: 120px; */ 
+     /*height: auto; */ 
+     width: 100%; 
+     height: 55px; 
+     margin: 1px 5px 5px 0; 
+     padding: 0px 5px 5px 0px;
+ 
+   } 
+ 
+   nav ul { 
+ 
+     list-style-type: none; /* Remove bullets */
+     margin: 5px 5px 5px 5px; 
+     padding: 5px 5px 5px 5px;
+     /*width: 200px; /* Set a width for the vertical nav */ 
+     display: flex; /* make nav links horizontal */ 
+     justify-content: center;
+ 
+   }
+   
+   nav li {
+     /*margin: 0 20px; /* Space out list items */ 
+     border: 4px solid #9698ae; /* Add border between links */ 
+     background-color: rgb(31, 159, 233); 
+     width: 200px; 
+     padding: 10px 5px 5px 10px;
+     
+ 
+   } 
+ 
+ 
+   
+   nav a {
+     text-decoration: none; /* Remove underline from links */
+     color: #333; /* Link color */
+     font-weight: bold; 
+     text-align: center; 
+     display: flex; /* Use flexbox to align icon and text */ 
+     
+     
+     
+   }  
+ 
+ 
+   
+ 
+   .fa-icon {
+     margin-right: 10px; /* Space between icon and text */
+     display: inline-block; /* Ensure the icon is inline with the text */
+   } 
+ 
+ 
+ 
+  nav a:hover, /* link text */
+  nav a:hover .fa-icon {    /* icon */
+   color: #0a1cc6; /* Set the hover color */
+ }
+ 
+ 
+   /* .active {
+     background-color: #99e2ff; 
+     height: 30px; 
+     padding: 10px 10px 10px 10px;
+ 
+   } */
+   

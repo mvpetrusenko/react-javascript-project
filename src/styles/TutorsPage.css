@@ -1,0 +1,47 @@
+/* src/styles/TutorsPage.css */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* !!! footer stick to the bottom: Make the wrapper take the full height of the viewport */
+  } 
+
+  
+.content-container {
+    flex: 1; /* Allow this to grow and take the remaining space */
+    padding: 20px; /* Adjust the padding as necessary */
+  } 
+
+
+.imageGallery { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center the gallery items */
+  }
+  
+  .galleryBlock {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis */
+    max-width: 200px; /* Maximum width of each gallery block */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing content */
+    text-align: center; /* Center text inside the block */
+    background-color: #f9f9f9; /* Light background color */
+    padding: 10px; /* Add padding inside the block */
+  }
+  
+  .galleryBlock img {
+    width: 100%; /* Make the image take full width of the block */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Remove the space below the image */
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .galleryBlock p {
+    margin: 0; /* Remove default margins */
+    font-size: 1em; /* Set font size */
+    color: #333; /* Text color */
+  }
+  
