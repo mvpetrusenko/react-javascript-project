@@ -17,7 +17,7 @@ function TimeTablePage() {
 
 
         
-        <h2>Time Table</h2> 
+      <h2>Time Table</h2> 
             
       </div> 
       {<Footer />}

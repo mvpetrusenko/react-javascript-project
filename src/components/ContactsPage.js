@@ -6,23 +6,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavBar from '../components/NavBar'; 
 import Header from '../components/Header'; 
 import Footer from '../components/Footer';
-import { faFacebook, faInstagram, faInstagramSquare, faSquareInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function ContactsPage() {
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [messageError, setMessageError] = useState('');
+  const [message, setMessage] = useState('');
+  const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [messageError, setMessageError] = useState('');
 
-  const handleMessageChange = (event) => {
+  const handleNameChange = (event) => {
     const value = event.target.value;
-    setMessage(value);
-
-    if (value.length > 9) {
-      setMessageError('Message cannot be more than 10 symbols');
-    } else {
-      setMessageError('');
-    }
+    setName(value);
+    // Add name validation if needed
   };
 
   const handleEmailChange = (event) => {
@@ -37,25 +34,65 @@ function ContactsPage() {
     }
   };
 
-  const handleSubmit = (event) => {
+  const handleMessageChange = (event) => {
+    const value = event.target.value;
+    setMessage(value);
+
+    if (value.length > 9) {
+      setMessageError('Message cannot be more than 10 symbols');
+    } else {
+      setMessageError('');
+    }
+  };
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Perform form submission logic here
+
+    if (name && email && message && !emailError && !messageError) {
+      const formData = { name, email, message };
+
+      try {
+        const response = await fetch('http://localhost:3001/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          console.log('Form submitted successfully');
+          setName('');
+          setEmail('');
+          setMessage('');
+          // Optionally show a success message to the user
+        } else {
+          console.error('Failed to submit the form');
+        }
+      } catch (error) {
+        console.error('An error occurred while submitting the form:', error);
+      }
+    } else {
+      if (!name) setNameError('Name is required');
+      if (!email) setEmailError('Email is required');
+      if (!message) setMessageError('Message is required');
+    }
   };
 
   return (
-    <div className="wrapper"> 
-    {<Header />}
-      <div className="content-container"> 
-      {<NavBar />}
+    <div className="wrapper">
+      <Header />
+      <div className="content-container">
+        <NavBar />
         <div className="contactsInfo">
           <p>If you have any questions, feel free to contact us!</p>
           <p><b>Phone Number:</b> +1.....</p>
           <p><b>Email:</b> test@gmail.com</p>
-          <p><b>Address:</b> St. ....</p> 
+          <p><b>Address:</b> St. ....</p>
           <div className="socialMedias">
-            <p><FontAwesomeIcon icon={faFacebook} className="fa-icon"/><a href="https://www.facebook.com/">Facebook Link</a></p>
-            <p><FontAwesomeIcon icon={faInstagram} className="fa-icon"/><a href="https://www.instagram.com/">Instagram Link</a></p>
-            <p><FontAwesomeIcon icon={faYoutube} className="fa-icon"/><a href="https://www.youtube.com/">YouTube Link</a></p>
+            <p><FontAwesomeIcon icon={faFacebook} className="fa-icon" /><a href="https://www.facebook.com/">Facebook Link</a></p>
+            <p><FontAwesomeIcon icon={faInstagram} className="fa-icon" /><a href="https://www.instagram.com/">Instagram Link</a></p>
+            <p><FontAwesomeIcon icon={faYoutube} className="fa-icon" /><a href="https://www.youtube.com/">YouTube Link</a></p>
           </div>
         </div>
         <div className="contactsFormSection">
@@ -69,9 +106,12 @@ function ContactsPage() {
                   type="text"
                   id="firstName"
                   name="firstName"
+                  value={name}
+                  onChange={handleNameChange}
                   placeholder="Mark"
                   required
                 /><br /><br />
+                <div id="nameError" className="validateFormError">{nameError}</div><br />
                 <label htmlFor="email">Your email:</label>
                 <div id="emailError" className="validateFormError">{emailError}</div><br />
                 <input
@@ -98,8 +138,8 @@ function ContactsPage() {
             </form>
           </div>
         </div>
-      </div> 
-      {<Footer />}
+      </div>
+      <Footer />
     </div>
   );
 }
