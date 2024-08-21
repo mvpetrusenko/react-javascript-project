@@ -1,5 +1,5 @@
 .tariffContainer {
-    display: flexbox; /* Enable flexbox */
+    display: flexbox; /* Enable flexbox */ 
     justify-content: space-between; /* Space out the blocks */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */ 
     gap: 20px; /* Space between blocks */ 
@@ -8,19 +8,20 @@
   }
 
   .card { 
-    flex: 1 1 30%; /* Flex-grow and flex-shrink with a base width of 30% */
-    padding: 8px;
-    border-radius: 8px; /* Rounded corners */
     display: flex;
-    flex-direction: column; /* Stack content vertically within block */
+    flex-direction: row; 
+    width: 80%; 
+    margin: 50px 5px 50px 150px; 
+    border-radius: 8px; /* Rounded corners */
     justify-content: space-between; /* Distribute space evenly within block */
   
   } 
 
   /* Style the list */
-.price {
+.price { 
+    flex: 0.3; /* if flex 1, 2, 3 - proportion of width, if < 1 the same size cards */
     list-style-type: none;
-    border: 1px solid #eee;
+    border: 1px solid #3a0ecb;
     margin: 0;
     padding: 0;
     -webkit-transition: 0.3s;
