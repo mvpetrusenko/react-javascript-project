@@ -8,8 +8,8 @@
   }
 
   .card { 
-    display: flex;
-    flex-direction: row; 
+    display: flex; /* this display flex is together with flex-direction */
+    flex-direction: row; /* to put cards in a row one next to the other */
     width: 80%; 
     margin: 50px 5px 50px 150px; 
     border-radius: 8px; /* Rounded corners */
