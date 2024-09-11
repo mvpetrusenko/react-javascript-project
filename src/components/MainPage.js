@@ -1,3 +1,6 @@
+// figma community - find design model, in Figma hints in css properties 
+// in program pixel perfect lay over this model to do website like in the model
+
 // src/components/MainPage.js
 
 import React from 'react';
