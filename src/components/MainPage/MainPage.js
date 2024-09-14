@@ -5,13 +5,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/MainPage.css';
-import article1 from '../assets/images/article1.jpg'; 
-import article2 from '../assets/images/article2.jpg'; 
-import article3 from '../assets/images/article3.jpg'; 
-import NavBar from '../components/NavBar'; 
-import Header from '../components/Header'; 
-import Footer from '../components/Footer';
+import '../MainPage/MainPage.css'
+import article1 from '../../assets/images/article1.jpg'; 
+import article2 from '../../assets/images/article2.jpg'; 
+import article3 from '../../assets/images/article3.jpg'; 
+import NavBar from '../NavBar/NavBar'; 
+import Header from '../Header/Header'; 
+import Footer from '../Footer/Footer';
 
 function MainPage() {
   return (

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/NavBar.css'; 
+import '../NavBar/NavBar.css' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSchool, faPersonChalkboard, faTable, faMoneyCheckDollar, faExternalLink, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 

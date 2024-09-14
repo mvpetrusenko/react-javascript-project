@@ -1,11 +1,11 @@
 // src/components/ContactsPage.js
 
 import React, { useState } from 'react';
-import '../styles/ContactsPage.css'; 
+import '../ContactsPage/ContactsPage.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; 
-import NavBar from '../components/NavBar'; 
-import Header from '../components/Header'; 
-import Footer from '../components/Footer';
+import NavBar from '../NavBar/NavBar'; 
+import Header from '../Header/Header'; 
+import Footer from '../Footer/Footer';
 import { faFacebook, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 function ContactsPage() {

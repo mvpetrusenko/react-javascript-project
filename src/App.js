@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainPage from './components/MainPage'; 
-import AboutPage from './components/AboutPage'; 
-import TutorsPage from './components/TutorsPage'; 
-import TimeTablePage from './components/TimeTablePage';
-import PriceListPage from './components/PriceListPage';
-import UsefulLinksPage from './components/UsefulLinksPage';
-import ContactsPage from './components/ContactsPage';
+import MainPage from './components/MainPage/MainPage'; 
+import AboutPage from './components/AboutPage/AboutPage'; 
+import TutorsPage from './components/TutorsPage/TutorsPage'; 
+import TimeTablePage from './components/TimeTablePage/TimeTablePage';
+import PriceListPage from './components/PriceListPage/PriceListPage';
+import UsefulLinksPage from './components/UsefulLinksPage/UsefulLinksPage';
+import ContactsPage from './components/ContactsPage/ContactsPage';
 import './App.css';  // Ensure you import global styles
 
 function App() {

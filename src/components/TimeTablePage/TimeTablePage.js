@@ -1,10 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/TimeTablePage.css'; 
-import '../styles/NavBar.css'; 
-import NavBar from '../components/NavBar'; 
-import Header from '../components/Header'; 
-import Footer from '../components/Footer'; 
+// TimeTablePage/TimeTablePage.js
 
+import React, { useState, useEffect } from 'react';
+import '../TimeTablePage/TimeTablePage.css' 
+import '../NavBar/NavBar.css'
+import NavBar from '../NavBar/NavBar'; 
+import Header from '../Header/Header'; 
+import Footer from '../Footer/Footer'; 
+import Button from '../Button/Button';
+
+let content = 'Click the button!';
+
+
+// output: button has been clicked This is click 1 (handleClick('This is click 1'))
+function handleClick(type) {
+  // if button has been click type is shown
+  content = type;
+
+}
 
 function TimeTablePage() { 
   // The useState hook is used to store the current time in the component's state 
@@ -12,7 +24,8 @@ function TimeTablePage() {
   // The time is rendered inside the <p> tag with the Current Local Time: {time}. 
   // The return () => clearInterval(interval); inside the useEffect hook ensures that the interval is 
   // cleared when the component unmounts, avoiding potential memory leaks or performance issues
-  
+
+
   const [time, setTime] = useState(new Date().toLocaleTimeString()); 
   
   useEffect(() => {
@@ -28,6 +41,7 @@ function TimeTablePage() {
   // actualTime.toLocaleTimeString();
 
 
+
   return (
     <div className="wrapper"> 
     {<Header />}
@@ -41,6 +55,17 @@ function TimeTablePage() {
       <p>Current Local Time: {time}</p>
             
       </div> 
+      <div> 
+      <section>
+
+        {/* () => closure (function) and call this function with fixed parameter (This is click 1) */}
+        <Button buttonClicked={() => handleClick('This is click 1')}>Click1</Button> 
+        <Button buttonClicked={() => handleClick('This is click 2')}>Click2</Button> 
+        <Button buttonClicked={() => handleClick('This is click 3')}>Click3</Button> 
+
+        <p>{content}</p>
+      </section>
+      </div>
       {<Footer />}
     </div>
   );

@@ -1,13 +1,28 @@
 // src/components/AboutPage.js
 
-import React, { useState } from 'react';
-import '../styles/AboutPage.css'; 
-import '../styles/NavBar.css'; 
+import React, { useState } from 'react'; 
+import '../AboutPage/AboutPage.css'
+import '../NavBar/NavBar.css'
 import { Link } from 'react-router-dom';
-import NavBar from '../components/NavBar'; 
-import Header from '../components/Header'; 
-import Footer from '../components/Footer'; 
+import NavBar from '../NavBar/NavBar.js'; 
+import Header from '../Header/Header.js'; 
+import Footer from '../Footer/Footer.js'; 
+import { ways } from '../../data/data.js';
 
+
+// we read difference of content from object props. Props can be renamed as you wish 
+// props is an object which contains keys (title, description) 
+// we can also can move ContentElement function in the other component and import it here
+function ContentElement(props) {
+  return (
+    <li>
+      <h4>{props.title}</h4>
+      {props.description.map((paragraph, index) => ( //In the ContentElement component, the description is mapped to render each paragraph inside a <p> element.
+        <p key={index}>{paragraph}</p> // The key={index} ensures that each paragraph has a unique key for React's rendering system.
+      ))}
+    </li>
+  )
+}
 
 function AboutPage() { 
   const [email, setEmail] = useState('');
@@ -45,18 +60,9 @@ function AboutPage() {
         {<NavBar />}
         <div className="aboutContent"> 
         
-            <h4>Our Mission</h4> 
-            <p>At BrightFuture English School, our mission is to empower students of all ages with the language skills and confidence needed to succeed in a globalized world.</p>
-            <p>We are dedicated to providing a high-quality English education that goes beyond traditional language learning.</p>
-            <p>Our focus is on developing comprehensive language skills, fostering critical thinking</p>
-            <p>and building cultural awareness.</p>
-         
-
-            <h4>Our Team</h4>
-            <p>Our team of highly qualified and passionate educators brings years of experience and expertise to the classroom.</p>
-            <p>Each teacher is committed to creating engaging and interactive lessons that inspire and motivate students.</p>
-            <p>We emphasize continuous professional development to stay current with the latest teaching methods and technologies.</p> 
-
+          <ul> 
+            <ContentElement {...ways[0]} />
+            <ContentElement {...ways[1]} />
 
             <h4>Our Programs</h4> 
             <p>We offer a diverse range of programs to accommodate different learning styles and schedules:</p> 
@@ -66,12 +72,9 @@ function AboutPage() {
                 <li><b>Kids and Teens Programs:</b>Fun and interactive classes designed to help younger learners build a strong foundation in English.</li>
             </ul>
 
-            <h4>Join Us</h4> 
-            <p>We invite you to join our vibrant community of learners and take the first step towards mastering the English language. </p>
-            <p>At BrightFuture English School, you’ll not only gain valuable language skills but also become part of a supportive network</p>
-            <p>that encourages personal and academic growth.</p><br></br>
-            <p>For more information about our programs and how to get started, please <Link to="/contacts">contact us</Link> or visit our registration page.</p>
-            <p>We look forward to welcoming you to BrightFuture English School!</p>
+            <ContentElement {...ways[1]} />
+
+          </ul>
         </div> 
         <div className="newsLetter">
             <p>Subscribe to our news letters to get more up-to-date info!</p> 

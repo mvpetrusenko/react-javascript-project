@@ -82,4 +82,10 @@ div.output {
     padding: 10px 30px 50px 50px;
     margin: 15px 5px;
     background-color: azure;
-}
+} 
+
+
+ul {
+    list-style-type: none; /* Remove bullets from the list */
+
+  }

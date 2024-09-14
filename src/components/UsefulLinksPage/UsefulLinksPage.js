@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import '../styles/UsefulLinksPage.css'; 
-import '../styles/NavBar.css'; 
-import NavBar from '../components/NavBar'; 
-import Header from '../components/Header'; 
-import Footer from '../components/Footer'; 
+import '../UsefulLinksPage/UsefulLinksPage.css'
+import '../NavBar/NavBar.css'
+import NavBar from '../NavBar/NavBar'; 
+import Header from '../Header/Header'; 
+import Footer from '../Footer/Footer'; 
 
 
 function UsefulLinksPage() { 
