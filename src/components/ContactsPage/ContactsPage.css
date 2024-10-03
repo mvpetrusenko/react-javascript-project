@@ -20,12 +20,6 @@ main {
     flex: 1;
 } 
 
-/* Navigation and article container */
-.content-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 /* Article styles */
 article {
     flex: 1; /* Takes the remaining space */

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../Header/Header.css'
 import logo from '../../assets/images/logo.jpg'; 
 
+//<h1 style={{ fontFamily: 'cursive', textAlign: 'center' }}></h1> - first {} - dynamic content, second - styles
 
 function Header() {
   return (

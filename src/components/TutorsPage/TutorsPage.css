@@ -6,11 +6,6 @@
     min-height: 100vh; /* !!! footer stick to the bottom: Make the wrapper take the full height of the viewport */
   } 
 
-  
-.content-container {
-    flex: 1; /* Allow this to grow and take the remaining space */
-    padding: 20px; /* Adjust the padding as necessary */
-  } 
 
 
 .imageGallery { 
@@ -18,30 +13,43 @@
     flex-wrap: wrap;
     gap: 20px;
     padding: 20px;
-    justify-content: center; /* Center the gallery items */
+    justify-content: space-between; 
   }
   
+
+
   .galleryBlock {
-    flex: 1 1 200px; /* Flex-grow, flex-shrink, and flex-basis */
-    max-width: 200px; /* Maximum width of each gallery block */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Clip overflowing content */
     text-align: center; /* Center text inside the block */
-    background-color: #f9f9f9; /* Light background color */
-    padding: 10px; /* Add padding inside the block */
+    background-color: #8965ff; /* Light background color */
+    padding: 10px; /* Add padding inside the block */ 
+    width: 30%; /* put 3 items in a row + display: flex + flex-wrap: wrap */ 
+    margin-bottom: 50px; 
+    padding: 20px 5px 5px 20px;
   }
   
   .galleryBlock img {
-    width: 100%; /* Make the image take full width of the block */
-    height: auto; /* Maintain the aspect ratio */
-    display: block; /* Remove the space below the image */
+    height: 250px;
+    width: 320px;
+    display: inline; /* images in the center of block */
     margin-bottom: 10px; /* Space between image and text */
   }
   
   .galleryBlock p {
-    margin: 0; /* Remove default margins */
-    font-size: 1em; /* Set font size */
-    color: #333; /* Text color */
+    display: block;
+    font-size: 1em; /* Set font size */ 
+    background-color: rgb(234, 156, 250);;
+    color: #2b2b2d; /* Text color */ 
+    line-height: 1.5; 
+    width: 300px; 
+    margin: 5px 5px 5px 5px;
   }
   
+  .galleryBlock section {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin: 15px 25px 15px 15px;
+  }

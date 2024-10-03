@@ -1,7 +1,34 @@
 // figma community - find design model, in Figma hints in css properties 
-// in program pixel perfect lay over this model to do website like in the model
+// in program pixel perfect lay over this model to do website like in the model 
 
-// src/components/MainPage.js
+// to run: npm start
+
+// src/components/MainPage.js 
+
+//Element to appear after some time:
+
+  // const [isHide, setIsHide] = useState(true);
+  // setTimeout(() => setIsHide(false), 5000); 
+  /* {!isHide ? <div>show after 5 seconds</div> : null} */
+  
+
+  // element to appear on scroll: 
+
+  // import { motion } from 'framer-motion'; + 
+  // install: npm install framer-motion
+  /* 
+
+    <motion.img 
+           initial={{opacity: 0, y: 50}} - at the beginning not visible, y - to appear on vertical scroll
+           whileInView={{opacity: 1, transition: {delay: 0.2, duration: 0.5}}} - on scroll appears
+           viewport={{once: false, amount: 1}} once: false - several times appear if 
+                                                we scroll down/up, amount: 1 - appears 100% 
+                                                of an element, .5 - 50%
+                                                transition to appear not very quick 
+
+  */ 
+
+
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -11,27 +38,34 @@ import article2 from '../../assets/images/article2.jpg';
 import article3 from '../../assets/images/article3.jpg'; 
 import NavBar from '../NavBar/NavBar'; 
 import Header from '../Header/Header'; 
-import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer'; 
+
+import { motion } from 'framer-motion';
 
 function MainPage() {
   return (
     <div className="wrapper"> 
     {<Header />} 
     {<NavBar />}
-      <main> 
-      <header className="video-header">
-      <iframe
+      <div className='video-container'>
+        <iframe
           className="introductionVideo"
           src="https://www.youtube.com/embed/BF83GlBo-d0?autoplay=1&mute=1&controls=1"
           allow="autoplay; encrypted-media"
           allowFullScreen
           title="Introduction Video"
         ></iframe>
-        <h1 className="header-title">Trusted by Students for Over 20 Years, Our Expert Tutors are Here to Help</h1>
-      </header>
-
-        <h3>Welcome to BrightFuture English School!</h3>
-        <div>
+      </div>
+        <motion.h3
+          initial={{opacity: 0, y: 50}} 
+          whileInView={{opacity: 1, transition: {delay: 0.4, duration: 0.9}}}
+          viewport={{once: false, amount: .4}}
+        >Welcome to BrightFuture English School!</motion.h3>
+        <motion.div
+            initial={{opacity: 0, y: 50}} 
+            whileInView={{opacity: 1, transition: {delay: 0.4, duration: 0.9}}}
+            viewport={{once: false, amount: .4}} 
+            className='atSchool'>
           <p style={{ textAlign: 'center' }}>
             At <mark>BrightFuture English School</mark>, we are dedicated to empowering students with the language skills
           </p>
@@ -39,8 +73,7 @@ function MainPage() {
           <p style={{ textAlign: 'center' }}>engaging curriculum, and supportive community create the perfect environment for learners of all</p>
           <p style={{ textAlign: 'center' }}>ages to thrive. Join us and embark on a journey towards mastering the English language, achieving</p>
           <p style={{ textAlign: 'center' }}>your goals, and unlocking a brighter future.</p>
-        </div>
-      </main>
+        </motion.div>
       {/* <section>
         <div className="content-container"> 
 

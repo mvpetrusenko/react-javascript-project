@@ -1,7 +1,7 @@
 // src/components/NavBar.js 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../NavBar/NavBar.css' 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faSchool, faPersonChalkboard, faTable, faMoneyCheckDollar, faExternalLink, faAddressBook } from '@fortawesome/free-solid-svg-icons';
@@ -11,16 +11,16 @@ function NavBar() {
     <nav className="navbar">
       <ul>
       <li>
-          <Link to="/">
+          <NavLink to="/">
             <FontAwesomeIcon icon={faHome} className="fa-icon"/> Home
-          </Link>
+          </NavLink>
         </li>
-        <li><Link to="/about"><FontAwesomeIcon icon={faSchool} className="fa-icon"/>About School</Link></li> 
-        <li><Link to="/tutors"><FontAwesomeIcon icon={faPersonChalkboard} className="fa-icon"/>Our Tutors</Link></li> 
-        <li><Link to="/timetable"><FontAwesomeIcon icon={faTable} className="fa-icon"/>Time Table</Link></li>
-        <li><Link to="/pricelist"><FontAwesomeIcon icon={faMoneyCheckDollar} className="fa-icon"/>Price list</Link></li> 
-        <li><Link to="/usefulLinks"><FontAwesomeIcon icon={faExternalLink} className="fa-icon"/>Useful links</Link></li>
-        <li><Link to="/contacts"><FontAwesomeIcon icon={faAddressBook} className="fa-icon"/>Contacts</Link></li>
+        <li className="activeTab"><NavLink to="/about" activeClassName="active"><FontAwesomeIcon icon={faSchool} className="fa-icon"/>About School</NavLink></li> 
+        <li><NavLink to="/tutors"><FontAwesomeIcon icon={faPersonChalkboard} className="fa-icon"/>Our Tutors</NavLink></li> 
+        <li><NavLink to="/timetable"><FontAwesomeIcon icon={faTable} className="fa-icon"/>Time Table</NavLink></li>
+        <li><NavLink to="/pricelist"><FontAwesomeIcon icon={faMoneyCheckDollar} className="fa-icon"/>Price list</NavLink></li> 
+        <li><NavLink to="/usefulLinks"><FontAwesomeIcon icon={faExternalLink} className="fa-icon"/>Useful links</NavLink></li>
+        <li><NavLink to="/contacts"><FontAwesomeIcon icon={faAddressBook} className="fa-icon"/>Contacts</NavLink></li>
       </ul>
     </nav>
   );

@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+BrightFuture English School Website
+This is the repository for the BrightFuture English School website, built using React for the frontend and Node.js for the backend.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Table of Contents
+Project Overview
+Technologies Used
+Installation
+Running the Project
+Folder Structure
+Backend API
+Contributing
+Project Overview
+The BrightFuture English School website serves as an interactive platform to provide information about the school, manage contact forms, and handle inquiries. It includes multiple pages, such as the main page, contact page, about page, and others.
 
-## Available Scripts
+Technologies Used
+Frontend
+React: A JavaScript library for building user interfaces.
+JavaScript (ES6+): Used for writing the logic for components and event handling.
+CSS: Used for styling the UI components.
+Backend
+Node.js: Server-side JavaScript runtime.
+Express: A web framework for Node.js, handling backend logic, API routes, and form submissions.
+Axios: Used for making HTTP requests from the frontend to the backend.
+Installation
+Prerequisites
+Make sure you have the following installed:
 
-In the project directory, you can run:
+Node.js (>= 14.x)
+npm or yarn (Node package manager)
+Steps to install 
 
-### `npm start`
+npm install 
+Start the React development server: 
+npm start 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The frontend should now be running at http://localhost:3000.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Running the Backend 
+Start the Node.js server: 
+node server.js 
 
-### `npm test`
+The backend should now be running at http://localhost:4000.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Backend API
+POST /api/endpoint: Handles form submissions from the contact page.
+Example Request:
 
-### `npm run build`
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "message": "Hello, I have a question."
+}
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributing
+If you'd like to contribute, please fork the repository and submit a pull request.

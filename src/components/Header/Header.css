@@ -1,4 +1,3 @@
-/* Header styles */
 header.sticky {
     position: -webkit-sticky;
     position: sticky;
@@ -8,12 +7,36 @@ header.sticky {
     overflow: hidden; /* Ensures the header contains the floated elements */
     height: 150px; 
     background-image: linear-gradient(#4f75dc, rgb(119, 205, 248)); 
-    margin-bottom: 0;
+    margin-bottom: 0; 
+    width: 100%;
 }
 
-/* Logo styles */
+
+
+
+/* line-height - space between lines
+line-height: 1.3; 
+
+display: block -  lines one under another  */
+
+
+
+
+
+
+/* float: left; make logo set to the left side  */ 
+
+/* space-between - space between float: left and float: right 
+
+text-align - location of elements according main horizontal line 
+
+align-items - location of elements according vertical line 
+
+display: flex - locate elements in one line  */
+ 
+
 .logo {
-    float: left;
+    float: left; 
     padding: 10px;
     margin: 5px;
     width: 180px;
@@ -22,7 +45,7 @@ header.sticky {
 
 }
 
-/* H1 styles */
+
 h1 {
     margin: 0;
     padding: 10px;

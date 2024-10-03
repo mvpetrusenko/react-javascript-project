@@ -8,15 +8,6 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer'; 
 import Button from '../Button/Button';
 
-let content = 'Click the button!';
-
-
-// output: button has been clicked This is click 1 (handleClick('This is click 1'))
-function handleClick(type) {
-  // if button has been click type is shown
-  content = type;
-
-}
 
 function TimeTablePage() { 
   // The useState hook is used to store the current time in the component's state 
@@ -27,6 +18,17 @@ function TimeTablePage() {
 
 
   const [time, setTime] = useState(new Date().toLocaleTimeString()); 
+  const [content, setContent] = useState('Click the button'); 
+
+
+  // output: button has been clicked This is click 1 (handleClick('This is click 1'))
+  function handleClick(type) {
+  // if button has been click type is shown 
+  // not! content = type
+    setContent(type);
+    
+
+}
   
   useEffect(() => {
     const interval = setInterval(() => {
