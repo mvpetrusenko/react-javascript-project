@@ -11,9 +11,8 @@
 .imageGallery { 
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
     justify-content: space-between; 
+    margin-top: 45px;
   }
   
 
@@ -23,13 +22,22 @@
     border-radius: 8px; /* Rounded corners */
     overflow: hidden; /* Clip overflowing content */
     text-align: center; /* Center text inside the block */
-    background-color: #8965ff; /* Light background color */
+    background-color: #b19ef5; /* Light background color */
     padding: 10px; /* Add padding inside the block */ 
     width: 30%; /* put 3 items in a row + display: flex + flex-wrap: wrap */ 
-    margin-bottom: 50px; 
-    padding: 20px 5px 5px 20px;
+    margin: 5px 15px 75px 15px; /* space between cards */
+    padding: 20px 5px 5px 20px; 
+    
   }
   
+
+  .galleryBlock:hover {
+    background-color: #8965ff; 
+    transform: scale(1.05, 1.05); /* card bigger on hover */
+  }
+
+
+
   .galleryBlock img {
     height: 250px;
     width: 320px;
@@ -47,9 +55,17 @@
     margin: 5px 5px 5px 5px;
   }
   
-  .galleryBlock section {
+  .galleryBlock section { 
+    background-color: #b19ef5;
     display: flex;
     flex-direction: column; 
     align-items: center;
     margin: 15px 25px 15px 15px;
   }
+
+
+  .galleryBlock section:hover {
+    background-color: #8965ff;
+  }
+
+  

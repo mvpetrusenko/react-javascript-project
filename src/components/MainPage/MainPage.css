@@ -17,12 +17,6 @@ body {
     flex-direction: column;
 }
 
-/* Wrapper to contain the entire content */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
 
 /* Main content should take all available space */
 main {
@@ -32,32 +26,44 @@ main {
 
 
 
+.content {
+    margin: 0;
+}
+
+
+.video-container {
+    margin-bottom: 0;
+}
+
+
+
 iframe.introductionVideo { 
-    margin: 0; 
-    padding: 0; 
     width: 100%; 
     height: 500px; 
-    z-index: -1; /* Ensure the video is behind the content */
+    margin: 0;
+    /* z-index: -1; - Ensure the video is behind the content  */
 } 
 
 
 .atSchool {
-    background-image: linear-gradient(to right, rgb(43, 43, 250), rgb(214, 208, 250));
-    margin: 0 5px 0 5px; 
-    padding: 15px 1px 25px 1px;
+    /* background-image: linear-gradient(to right, rgb(43, 43, 250), rgb(214, 208, 250));  */ 
+    background-image: url('../../assets/images/background.jpg');
+    padding: 15px 1px 25px 1px; 
+    height: 700px;
 }
 
 
 h3 {
     background-color: blue; 
     color: rgb(221, 221, 249); 
-    margin: 0;
     /* margin: 10px 50px 10px 3px;  */
     width: 100%; 
-    height: 35px;
+    height: 35px; 
     text-align: center; 
-    padding-top: 20px; 
-    padding-bottom: 10px;
+    padding-top: 15px; 
+    margin: 0;
+    /* margin-top: 0; */
+
 } 
 
 
@@ -68,22 +74,34 @@ h2 {
 
 /* Navigation and article container */
 .content-container {
-    display: flex; 
-    flex-wrap: wrap;
+    background-color: #aee3f9; 
+    padding: 35px 0 75px 5px; ;
 }
 
 
-/* Article content styles */
-.article-content { 
-    flex: 3;
-    padding: 20px; 
-    background-color: #aee3f9; 
-    text-align: center;
-}  
 
-/* .why-choose-us {
+.article-image {
+    width: 250px; 
+    height: 200px;
+}
+
+
+
+.article-cards {
+    display: flex; 
+    flex-direction: row; 
     width: 100%;
 }
+
+
+.article-card {
+    margin: 45px 30px 90px 55px; 
+    padding: 30px 35px 40px 35px; ;
+    background-color: #4ab6e5; 
+    width: 60%;
+}
+
+
 
 
 .card {

@@ -44,7 +44,7 @@ function TutorsPage() {
           <section>
             <p><b>Mrs. Brown</b></p><br></br>
             <p>Business English classes</p>
-            <p>5 years of experience</p>
+            <p>3 years of experience</p>
             <p>TOEFL, CELTA</p>
           </section>
           </div>
@@ -54,7 +54,7 @@ function TutorsPage() {
           <section>
             <p><b>Mrs. Swan</b></p><br></br>
             <p>Conversational English classes</p>
-            <p>5 years of experience</p>
+            <p>1 years of experience</p>
             <p>TOEFL, CELTA</p>
           </section>
           </div>
@@ -64,7 +64,7 @@ function TutorsPage() {
           <section>
             <p><b>Mr. Black</b></p><br></br>
             <p>English classes for teens</p>
-            <p>5 years of experience</p>
+            <p>4 years of experience</p>
             <p>TOEFL, CELTA</p>
           </section>
           </div>
@@ -74,7 +74,7 @@ function TutorsPage() {
           <section>
             <p><b>Mrs. Fox</b></p><br></br>
             <p>English classes for traveling</p>
-            <p>5 years of experience</p>
+            <p>2 years of experience</p>
             <p>TOEFL, CELTA</p>
           </section>
           </div>
@@ -84,7 +84,7 @@ function TutorsPage() {
           <section>
             <p><b>Mrs. Sunshine</b></p><br></br>
             <p>English classes for kids</p>
-            <p>5 years of experience</p>
+            <p>7 years of experience</p>
             <p>TOEFL, CELTA</p>
           </section>
           </div>
