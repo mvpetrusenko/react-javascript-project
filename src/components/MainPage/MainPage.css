@@ -27,7 +27,25 @@ main {
 
 
 .content {
-    margin: 0;
+    margin: 0; 
+}
+
+
+
+.elementsToAppear {
+    background-image: url('../../assets/images/background.jpg'); 
+    background-repeat: no-repeat;
+}
+
+
+
+.firstToAppear {
+    padding: 250px;
+}
+
+
+.secondToAppear {
+    padding: 350px;
 }
 
 
@@ -47,7 +65,7 @@ iframe.introductionVideo {
 
 .atSchool {
     /* background-image: linear-gradient(to right, rgb(43, 43, 250), rgb(214, 208, 250));  */ 
-    background-image: url('../../assets/images/background.jpg');
+    /* background-image: url('../../assets/images/background.jpg');  */
     padding: 15px 1px 25px 1px; 
     height: 700px;
 }
@@ -72,7 +90,18 @@ h2 {
     margin: 10px 50px 10px 540px;
 }
 
-/* Navigation and article container */
+
+
+
+
+.appears {
+    opacity: 0; 
+    transition: opacity 1200ms linear;
+}
+
+
+
+
 .content-container {
     background-color: #aee3f9; 
     padding: 35px 0 75px 5px; ;

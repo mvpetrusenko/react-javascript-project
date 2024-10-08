@@ -30,7 +30,7 @@
 
 
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import '../MainPage/MainPage.css'
 import article1 from '../../assets/images/article1.jpg'; 
@@ -43,6 +43,40 @@ import Footer from '../Footer/Footer';
 import { motion } from 'framer-motion';
 
 function MainPage() {
+
+  // setTimeOut with React 
+  // useState (false) - at the beginning element is not visible 
+  //showElement ? <div>Appears...</div> : null - apply function to the element
+
+  const [showFirstElement, setShowFirstElement] = useState(false); 
+  const [showSecondElement, setShowSecondElement] = useState(false); 
+
+  // useEffect (() => {
+  //   const timer = setTimeout(() => {
+  //     setShowFirstElement(true); 
+  //   }, 3000);
+  //   return () => clearTimeout(timer);
+  // }, []) 
+
+
+  useEffect(() => {
+    
+    const timer1 = setTimeout(() => {
+      setShowFirstElement(true);
+    }, 2000); 
+
+    const timer2 = setTimeout(() => {
+      setShowSecondElement(true);
+    }, 3000); 
+
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []); 
+     
+
   return (
     <div className="wrapper"> 
     {<Header />} 
@@ -56,25 +90,33 @@ function MainPage() {
           title="Introduction Video"
         ></iframe>
       </div>
+
       <div className="content">
         <motion.h3
          initial={{opacity: 0, y: 50}} 
           whileInView={{opacity: 1, transition: {delay: 0.2, duration: 0.9}}}
           viewport={{once: false, amount: .4}}
         >Welcome to BrightFuture English School!</motion.h3>
-        <motion.div
-          initial={{opacity: 0, y: 50}} 
-          whileInView={{opacity: 1, transition: {delay: 0.2, duration: 0.9}}}
-          viewport={{once: false, amount: .4}} 
-          className='atSchool'>
-            <p style={{ textAlign: 'center' }}>
-            At <mark>BrightFuture English School</mark>, we are dedicated to empowering students with the language skills
-            </p>
-            <p style={{ textAlign: 'center' }}>and confidence they need to succeed in an ever-changing world. Our experienced teachers,</p>
-            <p style={{ textAlign: 'center' }}>engaging curriculum, and supportive community create the perfect environment for learners of all</p>
-            <p style={{ textAlign: 'center' }}>ages to thrive. Join us and embark on a journey towards mastering the English language, achieving</p>
-            <p style={{ textAlign: 'center' }}>your goals, and unlocking a brighter future.</p>
-        </motion.div>
+        <div className="elementsToAppear">
+          <motion.div
+            initial={{opacity: 0, y: 50}} 
+            whileInView={{opacity: 1, transition: {delay: 0.2, duration: 0.9}}}
+            viewport={{once: false, amount: .4}} 
+            className='atSchool'>
+              <p style={{ textAlign: 'center' }}>
+              At <mark>BrightFuture English School</mark>, we are dedicated to empowering students with the language skills
+              </p>
+              <p style={{ textAlign: 'center' }}>and confidence they need to succeed in an ever-changing world. Our experienced teachers,</p>
+              <p style={{ textAlign: 'center' }}>engaging curriculum, and supportive community create the perfect environment for learners of all</p>
+              <p style={{ textAlign: 'center' }}>ages to thrive. Join us and embark on a journey towards mastering the English language, achieving</p>
+              <p style={{ textAlign: 'center' }}>your goals, and unlocking a brighter future.</p>
+
+              {showFirstElement ? <div className="firstToAppear">Appears...</div> : null}
+              {showSecondElement ? <div className="secondToAppear"> Second Appears...</div> : null}
+          </motion.div> 
+
+        </div>
+
       </div>
         <div className="content-container"> 
           <h1>Empowering Minds, Enriching Lives</h1>
