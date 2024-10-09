@@ -28,7 +28,7 @@
 
   */ 
 
-
+// html symbol - arrow: &#8592;
 
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
@@ -36,6 +36,10 @@ import '../MainPage/MainPage.css'
 import article1 from '../../assets/images/article1.jpg'; 
 import article2 from '../../assets/images/article2.jpg'; 
 import article3 from '../../assets/images/article3.jpg'; 
+import kids from '../../assets/images/kids.jpg'; 
+import speaking from '../../assets/images/speaking.jpg'; 
+import teens from '../../assets/images/teens.jpg'; 
+import adults from '../../assets/images/adults.jpg'; 
 import NavBar from '../NavBar/NavBar'; 
 import Header from '../Header/Header'; 
 import Footer from '../Footer/Footer'; 
@@ -168,6 +172,38 @@ function MainPage() {
           <p>vibrant community of learners and take the first step towards achieving your language goals.</p>
 
         </div>
+
+        <div>
+          <p className='activities'>Our activities</p>
+          <div className="carousel">
+            <div className='carousel-list'>
+              <div className="carousel-item active">
+                <img src={kids} alt="Kids" className="carousel-image" />
+                <div className="carousel-item-text">English for kids</div>
+              </div>
+              <div className="carousel-item">
+                <img src={speaking} alt="Speaking" className="carousel-image" />
+                <div className="carousel-item-text">English Speaking club</div>
+              </div>
+              <div className="carousel-item">
+                <img src={teens} alt="Teens" className="carousel-image" />
+                <div className="carousel-item-text">English club for teens</div>
+              </div>
+              <div className="carousel-item">
+                <img src={adults} alt="Adults" className="carousel-image" />
+                <div className="carousel-item-text">Business English</div>
+              </div>
+            </div>
+          </div> 
+
+          <div className="arrows">
+            <button id="prev">&#8678;</button>
+            <button id="back">Go Back</button>
+            <button id="next">&#8680;</button>
+          </div>
+        </div>
+
+
 
       {<ScrollToTopButton />}
       {<Footer />}
