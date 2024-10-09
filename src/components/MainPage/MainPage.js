@@ -63,11 +63,11 @@ function MainPage() {
     
     const timer1 = setTimeout(() => {
       setShowFirstElement(true);
-    }, 2000); 
+    }, 4000); 
 
     const timer2 = setTimeout(() => {
       setShowSecondElement(true);
-    }, 3000); 
+    }, 5000); 
 
 
     return () => {
@@ -111,8 +111,8 @@ function MainPage() {
               <p style={{ textAlign: 'center' }}>ages to thrive. Join us and embark on a journey towards mastering the English language, achieving</p>
               <p style={{ textAlign: 'center' }}>your goals, and unlocking a brighter future.</p>
 
-              {showFirstElement ? <div className="firstToAppear">Appears...</div> : null}
-              {showSecondElement ? <div className="secondToAppear"> Second Appears...</div> : null}
+              {showFirstElement ? <div className="firstToAppear">Best tutors</div> : null}
+              {showSecondElement ? <div className="secondToAppear">Best prices</div> : null}
           </motion.div> 
 
         </div>
