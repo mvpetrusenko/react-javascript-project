@@ -39,6 +39,7 @@ import article3 from '../../assets/images/article3.jpg';
 import NavBar from '../NavBar/NavBar'; 
 import Header from '../Header/Header'; 
 import Footer from '../Footer/Footer'; 
+import ScrollToTopButton from '../ScrollToTopButton/ScrollToTopButton';
 
 import { motion } from 'framer-motion';
 
@@ -167,6 +168,8 @@ function MainPage() {
           <p>vibrant community of learners and take the first step towards achieving your language goals.</p>
 
         </div>
+
+      {<ScrollToTopButton />}
       {<Footer />}
       
     </div>

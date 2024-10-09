@@ -1,0 +1,24 @@
+.scrollToTop {
+    cursor: pointer; 
+    border-radius: 5px;
+    font-weight: bold; 
+    color: rgb(99, 10, 99); 
+    background-color: rgb(205, 143, 206); 
+    margin: 25px 15px 15px 15px; 
+    width: 70px; 
+    height: 50px; 
+    margin-left: 1580px; 
+    opacity: 0.5; 
+    border: 6px solid gray; 
+}
+
+
+.scrollToTop:hover {
+    background-color: #eaf919;
+}
+
+
+
+.arrowUp {
+    height: 25px;
+}
