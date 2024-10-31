@@ -49,6 +49,110 @@ import { motion } from 'framer-motion';
 
 function MainPage() {
 
+  /* Beautiful slider 
+
+  let nextButton = document.getElementById('next'); 
+  let prevButton = document.getElementById('prev');
+  let backButton = document.getElementById('back'); 
+
+  let carousel = document.querySelector('.carousel'); 
+  let listHTML = document.querySelector('.carousel .list'); 
+
+
+  nextButton.onClick = function () {
+      showSlider('next');
+  } 
+
+
+  prevButton.onClick = function () {
+      showSlider('prev');
+  }
+
+
+
+  const showSlider = (type) => {
+      let items = document.querySelectorAll('.carousel .list .item'); 
+      
+      if(type === 'next') {
+          listHTML.appendChild(items[0]); 
+          carousel.classList.add('next');
+      }
+  } 
+
+
+
+
+
+
+
+
+  Convert to React: 
+
+  const [items, setItems] = useState([
+    'Item 1', 'Item 2', 'Item 3', 'Item 4' // Example items, replace with actual content as needed
+  ]);
+
+  const showSlider = (type) => {
+    if (type === 'next') {
+      // Rotate the items array to the left for the next button
+      setItems((prevItems) => [...prevItems.slice(1), prevItems[0]]);
+    } else if (type === 'prev') {
+      // Rotate the items array to the right for the previous button
+      setItems((prevItems) => [prevItems[prevItems.length - 1], ...prevItems.slice(0, -1)]);
+    }
+  };
+
+  return (
+    <div className="carousel">
+      <button id="prev" onClick={() => showSlider('prev')}>Previous</button>
+      <div className="list">
+        {items.map((item, index) => (
+          <div key={index} className="item">{item}</div>
+        ))}
+      </div>
+      <button id="next" onClick={() => showSlider('next')}>Next</button>
+    </div>
+  );
+};
+
+
+
+
+We use useState to manage the items array, representing the items in the carousel 
+
+In React, state is used to store and dynamically update data within components. 
+
+The function accepts a parameter (type) that determines whether to shift to the next or previous item 
+
+Each item in the items array is displayed as a div within the carousel 
+
+map is used to iterate over items and render each item individually, allowing each item to have a unique key based on its index
+
+
+
+
+  */ 
+
+
+
+
+const [items, setItems] = useState([
+  { id: 1, text: 'English for kids', imgSrc: kids },
+  { id: 2, text: 'English Speaking club', imgSrc: speaking },
+  { id: 3, text: 'English club for teens', imgSrc: teens },
+  { id: 4, text: 'Business English', imgSrc: adults }
+]);
+
+ const showSlider = (type) => {
+   if (type === 'next') {
+     setItems((prevItems) => [...prevItems.slice(1), prevItems[0]]);
+   } else if (type === 'prev') {
+     setItems((prevItems) => [prevItems[prevItems.length - 1], ...prevItems.slice(0, -1)]);
+   }
+ };
+
+
+
   // setTimeOut with React 
   // useState (false) - at the beginning element is not visible 
   //showElement ? <div>Appears...</div> : null - apply function to the element
@@ -176,8 +280,16 @@ function MainPage() {
         <div>
           <p className='activities'>Our activities</p>
           <div className="carousel">
-            <div className='carousel-list'>
-              <div className="carousel-item active">
+            <div className="carousel-list">
+              {items.map((item, index) => (
+                <div key={item.id} className={`carousel-item item-${index + 1}`}>
+                  <img src={item.imgSrc} alt={item.text} className="carousel-image" />
+                  <div className="carousel-item-text">{item.text}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+              {/* <div className="carousel-item active">
                 <img src={kids} alt="Kids" className="carousel-image" />
                 <div className="carousel-item-text">English for kids</div>
               </div>
@@ -192,14 +304,13 @@ function MainPage() {
               <div className="carousel-item">
                 <img src={adults} alt="Adults" className="carousel-image" />
                 <div className="carousel-item-text">Business English</div>
-              </div>
-            </div>
-          </div> 
+              </div> */}
+
 
           <div className="arrows">
-            <button id="prev">&#8678;</button>
-            <button id="back">Go Back</button>
-            <button id="next">&#8680;</button>
+            <button id="prev" onClick={() => showSlider('prev')}>&#8678; Prev</button>
+            {/* <button id="back">Go Back</button> */}
+            <button id="next" onClick={() => showSlider('next')}>&#8680; Next</button>
           </div>
         </div>
 
